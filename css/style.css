@@ -771,7 +771,7 @@ a {
   }
 }
 
-.header {
+.first {
   background-image: url("../images/header/header-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -974,7 +974,22 @@ a {
   margin-top: 20px;
 }
 
-.mobile__menu {
+.mobile-burger {
+  display: none;
+}
+
+.mobile-menu {
+  position: absolute;
+  z-index: 5;
+  top: -100%;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #162127;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  overflow: auto;
   display: none;
 }
 
@@ -1529,24 +1544,15 @@ a {
     margin-bottom: 50px;
   }
 
-  .column-header:nth-child(1) {
+  .column-header__menu {
     display: none;
   }
 
-  .column-header__menu {
-    position: absolute;
-    top: -100%;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    background-color: #162127;
-    -webkit-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s;
-    overflow: auto;
+  .mobile-menu {
+    display: block;
   }
 
-  .column-header__menu.active {
+  .mobile-menu.active {
     top: 0;
   }
 
@@ -1570,8 +1576,9 @@ a {
     display: none;
   }
 
-  .mobile__menu {
+  .mobile-burger {
     display: block;
+    z-index: 10;
     width: 30px;
     height: 20px;
     position: relative;
@@ -1581,7 +1588,7 @@ a {
     margin-right: 25px;
   }
 
-  .mobile__menu span {
+  .mobile-burger span {
     top: 9px;
     position: absolute;
     width: 100%;
@@ -1592,8 +1599,8 @@ a {
     transition: all .5s;
   }
 
-  .mobile__menu::after,
-  .mobile__menu::before {
+  .mobile-burger::after,
+  .mobile-burger::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -1605,28 +1612,28 @@ a {
     z-index: 5;
   }
 
-  .mobile__menu::after {
+  .mobile-burger::after {
     top: 0;
   }
 
-  .mobile__menu::before {
+  .mobile-burger::before {
     top: 19px;
   }
 
-  .mobile__menu.active span {
+  .mobile-burger.active span {
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
     transform: scale(0);
   }
 
-  .mobile__menu.active::after {
+  .mobile-burger.active::after {
     top: 9px;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
 
-  .mobile__menu.active::before {
+  .mobile-burger.active::before {
     top: 9px;
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);

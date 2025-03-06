@@ -7,47 +7,81 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <title>Hungry people</title>
+
+    <script src="js/jquery-3.5.1.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
+    <script src="js/slick.min.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
-    <header class="header">
+    <section class="first">
         <div class="container">
-            <div class="header__top top-header">
-                <div class="top-header__column column-header">
-                    <nav class="column-header__menu">
-                        <ul class="column-header__list" id="listOriginal">
-                            <li class="column-header__item toMove" id="itemToMove"><a href="#"
-                                    class="column-header__link">HOME</a></li>
-                            <li class="column-header__item toMove" id="itemToMove"><a href="#"
-                                    class="column-header__link">ABOUT</a></li>
-                            <li class="column-header__item toMove" id="itemToMove"><a href="#"
-                                    class="column-header__link">TEAM</a></li>
-                            <li class="column-header__item toMove" id="itemToMove"><a href="#"
-                                    class="column-header__link">BOOKING</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="top-header__column column-header">
-                    <div class="column-header__logo">
-                        <a href="#" class="column-header__logo-link">
-                            <img src="images/header/logo.png" alt="" class="column-header__logo-img">
-                        </a>
+            <header class="header">
+                <div class="container">
+                    <div class="header__top top-header">
+                        <div class="top-header__column column-header">
+                            <nav class="column-header__menu">
+                                <ul class="column-header__list">
+                                    <li class="column-header__item"><a href="#" class="column-header__link">HOME</a>
+                                    </li>
+                                    <li class="column-header__item"><a href="#" class="column-header__link">ABOUT</a>
+                                    </li>
+                                    <li class="column-header__item"><a href="#" class="column-header__link">TEAM</a>
+                                    </li>
+                                    <li class="column-header__item"><a href="#" class="column-header__link">BOOKING</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="top-header__column column-header">
+                            <div class="column-header__logo">
+                                <a href="#" class="column-header__logo-link">
+                                    <img src="images/header/logo.png" alt="" class="column-header__logo-img">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="top-header__column column-header">
+                            <nav class="column-header__menu column-header__menu--right">
+                                <ul class="column-header__list" id="list">
+                                    <li class="column-header__item"><a href="#" class="column-header__link">MENU</a>
+                                    </li>
+                                    <li class="column-header__item"><a href="#" class="column-header__link">GALERIE</a>
+                                    </li>
+                                    <li class="column-header__item"><a href="#" class="column-header__link">EVENTS</a>
+                                    </li>
+                                    <li class="column-header__item"><a href="#" class="column-header__link">CONTACT</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="mobile-burger">
+                            <span></span>
+                        </div>
+
+                        <div class="mobile-menu">
+                            <ul class="column-header__list">
+                                <li class="column-header__item"><a href="#" class="column-header__link">HOME</a>
+                                </li>
+                                <li class="column-header__item"><a href="#" class="column-header__link">ABOUT</a>
+                                </li>
+                                <li class="column-header__item"><a href="#" class="column-header__link">TEAM</a>
+                                </li>
+                                <li class="column-header__item"><a href="#" class="column-header__link">BOOKING</a></li>
+                                <li class="column-header__item"><a href="#" class="column-header__link">MENU</a>
+                                </li>
+                                <li class="column-header__item"><a href="#" class="column-header__link">GALERIE</a>
+                                </li>
+                                <li class="column-header__item"><a href="#" class="column-header__link">EVENTS</a>
+                                </li>
+                                <li class="column-header__item"><a href="#" class="column-header__link">CONTACT</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="top-header__column column-header">
-                    <nav class="column-header__menu column-header__menu--right">
-                        <ul class="column-header__list" id="list">
-                            <li class="column-header__item"><a href="#" class="column-header__link">MENU</a></li>
-                            <li class="column-header__item"><a href="#" class="column-header__link">GALERIE</a></li>
-                            <li class="column-header__item"><a href="#" class="column-header__link">EVENTS</a></li>
-                            <li class="column-header__item"><a href="#" class="column-header__link">CONTACT</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="mobile__menu">
-                    <span></span>
-                </div>
-            </div>
+            </header>
+
             <div class="header__headline headline-header">
                 <div class="headline-header__subtitle"> RESTAURANT</div>
                 <div class="headline-header__title">hungry people</div>
@@ -63,7 +97,6 @@
                                 d="M6.375 8.25L1.0625 2.9375C0.880208 2.75521 0.789062 2.53385 0.789062 2.27344C0.789062 2.01302 0.880208 1.79167 1.0625 1.60938L1.96094 0.75C2.14323 0.567708 2.36458 0.476562 2.625 0.476562C2.88542 0.476562 3.10677 0.567708 3.28906 0.75L7.03906 4.5L10.7891 0.75C10.9714 0.567708 11.1927 0.476562 11.4531 0.476562C11.7135 0.476562 11.9349 0.567708 12.1172 0.75L13.0156 1.60938C13.1979 1.79167 13.2891 2.01302 13.2891 2.27344C13.2891 2.53385 13.1979 2.75521 13.0156 2.9375L7.70312 8.25C7.52083 8.43229 7.29948 8.52344 7.03906 8.52344C6.77865 8.52344 6.55729 8.43229 6.375 8.25Z"
                                 fill="#333333" />
                         </svg>
-
                     </a>
                 </div>
             </div>
@@ -80,7 +113,7 @@
                 </a>
             </div>
         </div>
-    </header>
+    </section>
     <section class="about">
         <div class="container">
             <div class="about__inner inner-about inner">
@@ -128,7 +161,7 @@
                         <input type="text" class="form-book__input input" placeholder="Name">
                         <input type="email" class="form-book__input input" placeholder="Email">
                         <input type="tel" class="form-book__input input" placeholder="Phone">
-                        <input id="book-input-number" type="number" class="form-book__input input" placeholder="People">
+                        <input type="number" min="0" class="form-book__input input" placeholder="People">
                         <button type="submit" class="form-book__btn btn">BOOK NOW</button>
                     </div>
                 </div>
@@ -545,13 +578,6 @@
             <div class="footer__copyright">© Copyright Mindblister 2019</div>
         </div>
     </footer>
-
-
-
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/main.js"></script>
 </body>
 
 </html>
